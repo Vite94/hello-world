@@ -5,7 +5,9 @@ pipeline {
             steps {
                 script{
                     returnedVal = sh (script: 'python script.py', returnStatus: true)
-                    echo "$returnedVal"
+                    if (returnedVal == 1) {
+                        echo "$returnedVal";    
+                    }
                 }
             }
         }
