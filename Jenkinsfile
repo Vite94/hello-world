@@ -3,11 +3,13 @@ pipeline {
     stages{
         stage('build') {
             steps {
-                returnedVal = sh (
-                    script: 'python script.py',
-                    returnStatus: true
-                    )
-                echo "$returnedVal"
+                step{
+                    returnedVal = sh (
+                        script: 'python script.py',
+                        returnStatus: true
+                        )
+                    echo "$returnedVal"
+                }
             }
         }
     }
