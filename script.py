@@ -1,3 +1,3 @@
 def exit_code():
-  return True
+  print(True)
 exit_code()
