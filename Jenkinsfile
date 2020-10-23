@@ -6,6 +6,8 @@ pipeline {
                 returnedVal = sh (
                     script: 'python script.py',
                     returnStatus: true
+                    )
+                echo "$returnedVal"
             }
         }
     }
