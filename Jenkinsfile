@@ -3,7 +3,9 @@ pipeline {
     stages{
         stage('build') {
             steps {
-                sh 'python script.py'
+                returnedVal = sh (
+                    script: 'python script.py',
+                    returnStatus: true
             }
         }
     }
